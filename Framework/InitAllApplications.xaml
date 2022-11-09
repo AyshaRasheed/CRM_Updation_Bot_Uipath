@@ -1,0 +1,114 @@
+<Activity mc:Ignorable="sap sap2010" x:Class="Initialize_Applications" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=System.Private.CoreLib" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:uix="http://schemas.uipath.com/workflow/activities/uix" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <x:Members>
+    <x:Property sap2010:Annotation.AnnotationText="Dictionary structure to store configuration data of the process (settings, constants and assets)." Name="in_Config" Type="InArgument(scg:Dictionary(x:String, x:Object))" />
+  </x:Members>
+  <VisualBasic.Settings>
+    <x:Null />
+  </VisualBasic.Settings>
+  <sap:VirtualizedContainerService.HintSize>737,824</sap:VirtualizedContainerService.HintSize>
+  <sap2010:WorkflowViewState.IdRef>Initialization_1</sap2010:WorkflowViewState.IdRef>
+  <TextExpression.NamespacesForImplementation>
+    <sco:Collection x:TypeArguments="x:String">
+      <x:String>System.Activities.XamlIntegration</x:String>
+      <x:String>System.Activities.Validation</x:String>
+      <x:String>System.Activities</x:String>
+      <x:String>System.Activities.Statements</x:String>
+      <x:String>System.Activities.Expressions</x:String>
+      <x:String>Microsoft.VisualBasic</x:String>
+      <x:String>Microsoft.VisualBasic.Activities</x:String>
+      <x:String>System</x:String>
+      <x:String>System.Collections.Generic</x:String>
+      <x:String>System.Data</x:String>
+      <x:String>System.Diagnostics</x:String>
+      <x:String>System.IO</x:String>
+      <x:String>System.Linq</x:String>
+      <x:String>System.Management.Automation</x:String>
+      <x:String>System.Net.Mail</x:String>
+      <x:String>System.Xml</x:String>
+      <x:String>System.Xml.Linq</x:String>
+      <x:String>System.Windows.Markup</x:String>
+      <x:String>System.Drawing</x:String>
+      <x:String>UiPath.Core</x:String>
+      <x:String>System.Security</x:String>
+      <x:String>UiPath.Core.Activities</x:String>
+      <x:String>GlobalVariablesNamespace</x:String>
+      <x:String>GlobalConstantsNamespace</x:String>
+      <x:String>UiPath.UIAutomationNext.Enums</x:String>
+      <x:String>UiPath.UIAutomationCore.Contracts</x:String>
+      <x:String>System.Collections.ObjectModel</x:String>
+      <x:String>System.Collections</x:String>
+      <x:String>UiPath.UIAutomationNext.Activities</x:String>
+      <x:String>UiPath.Platform.ObjectLibrary</x:String>
+      <x:String>UiPath.Shared.Activities</x:String>
+    </sco:Collection>
+  </TextExpression.NamespacesForImplementation>
+  <TextExpression.ReferencesForImplementation>
+    <scg:List x:TypeArguments="AssemblyReference" Capacity="32">
+      <AssemblyReference>System.Activities</AssemblyReference>
+      <AssemblyReference>Microsoft.VisualBasic</AssemblyReference>
+      <AssemblyReference>mscorlib</AssemblyReference>
+      <AssemblyReference>System.Data</AssemblyReference>
+      <AssemblyReference>System</AssemblyReference>
+      <AssemblyReference>System.Core</AssemblyReference>
+      <AssemblyReference>System.Management.Automation</AssemblyReference>
+      <AssemblyReference>System.Xml</AssemblyReference>
+      <AssemblyReference>System.Xml.Linq</AssemblyReference>
+      <AssemblyReference>PresentationFramework</AssemblyReference>
+      <AssemblyReference>WindowsBase</AssemblyReference>
+      <AssemblyReference>PresentationCore</AssemblyReference>
+      <AssemblyReference>System.Xaml</AssemblyReference>
+      <AssemblyReference>System.ServiceModel</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.Composition</AssemblyReference>
+      <AssemblyReference>System.Drawing</AssemblyReference>
+      <AssemblyReference>TimeSpan2</AssemblyReference>
+      <AssemblyReference>UiPath.System.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.UiAutomation.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Studio.Constants</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationNext</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationCore</AssemblyReference>
+      <AssemblyReference>System.Private.CoreLib</AssemblyReference>
+      <AssemblyReference>System.ObjectModel</AssemblyReference>
+      <AssemblyReference>System.Collections.NonGeneric</AssemblyReference>
+      <AssemblyReference>System.Collections</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationNext.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Platform</AssemblyReference>
+      <AssemblyReference>UiPath.Excel.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Testing.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.OCR.Activities</AssemblyReference>
+    </scg:List>
+  </TextExpression.ReferencesForImplementation>
+  <Sequence sap2010:Annotation.AnnotationText="Open applications used in the process and do necessary initialization procedures (e.g., login)." DisplayName="Initialize All Applications" sap:VirtualizedContainerService.HintSize="496,759" sap2010:WorkflowViewState.IdRef="Sequence_9">
+    <sap:WorkflowViewStateService.ViewState>
+      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+        <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+      </scg:Dictionary>
+    </sap:WorkflowViewStateService.ViewState>
+    <ui:LogMessage DisplayName="Log message (Initialize applications)" sap:VirtualizedContainerService.HintSize="434,101" sap2010:WorkflowViewState.IdRef="LogMessage_1" Level="Trace" Message="[&quot;Opening applications...&quot;]" />
+    <uix:NApplicationCard AttachMode="ByInstance" DisplayName="Use Application: My CRM (Sample App)" sap:VirtualizedContainerService.HintSize="434,454" sap2010:WorkflowViewState.IdRef="NApplicationCard_1" ScopeGuid="a0fabcc8-bfac-4d9c-ad42-9901627084d5" Version="V2">
+      <uix:NApplicationCard.Body>
+        <ActivityAction x:TypeArguments="x:Object">
+          <ActivityAction.Argument>
+            <DelegateInArgument x:TypeArguments="x:Object" Name="WSSessionData" />
+          </ActivityAction.Argument>
+          <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="400,114" sap2010:WorkflowViewState.IdRef="Sequence_10">
+            <sap:WorkflowViewStateService.ViewState>
+              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+              </scg:Dictionary>
+            </sap:WorkflowViewStateService.ViewState>
+          </Sequence>
+        </ActivityAction>
+      </uix:NApplicationCard.Body>
+      <uix:NApplicationCard.TargetApp>
+        <uix:TargetApp Area="40, 40, 310, 638" FilePath="[in_config(&quot;applicationurl&quot;).ToString]" IconBase64="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" InformativeScreenshot="fe6555e94ae859b0cc8745f789ac4100.png" Selector="&lt;wnd app='mycrm.exe' ctrlname='Form1' /&gt;" />
+      </uix:NApplicationCard.TargetApp>
+      <sap:WorkflowViewStateService.ViewState>
+        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+          <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+          <x:Boolean x:Key="IsPinned">False</x:Boolean>
+        </scg:Dictionary>
+      </sap:WorkflowViewStateService.ViewState>
+    </uix:NApplicationCard>
+  </Sequence>
+</Activity>
